@@ -1,7 +1,9 @@
 package homeWork_2_2;
 
-public class Main {
+import java.util.Arrays;
+import java.util.concurrent.Callable;
 
+public class Main {
 
     public static void main(String[] args) {
 
@@ -16,12 +18,11 @@ public class Main {
         Bicycle bicycle = new Bicycle("bicycle1", 2);
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
-        ServiceStation station = new ServiceStation();
-        Service.check(car, null, null);
-        Service.check(car2, null, null);
-        Service.check(null, bicycle, null);
-        Service.check(null, bicycle2, null);
-        Service.check(null, null, truck);
-        Service.check(null, null, truck2);
+        Bicycle.check(bicycle);
+        Bicycle.check(bicycle2);
+        Truck.check(truck);
+        Truck.check(truck2);
+        Car.check(car);
+        Car.check(car2);
     }
 }

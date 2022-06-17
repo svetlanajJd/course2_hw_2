@@ -18,11 +18,11 @@ public class Main {
         Bicycle bicycle = new Bicycle("bicycle1", 2);
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
-        Bicycle.check(bicycle);
-        Bicycle.check(bicycle2);
-        Truck.check(truck);
-        Truck.check(truck2);
-        Car.check(car);
-        Car.check(car2);
+        ServiceStation.serviceExamination(car);
+        ServiceStation.serviceExamination(car2);
+        ServiceStation.serviceExamination(bicycle);
+        ServiceStation.serviceExamination(bicycle2);
+        ServiceStation.serviceExamination(truck);
+        ServiceStation.serviceExamination(truck2);
     }
 }

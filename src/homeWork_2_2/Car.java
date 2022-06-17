@@ -1,6 +1,6 @@
 package homeWork_2_2;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Service {
 
     public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -14,13 +14,14 @@ public class Car extends Vehicle {
         System.out.println("Проверяем двигатель");
     }
 
-    public static void check(Car car) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.getModelName());
-            for (int i = 0; i < car.getWheelsCount(); i++) {
-                car.updateTyre();
+    @Override
+    public void check() {
+        if (this != null) {
+            System.out.println("Обслуживаем " + this.getModelName());
+            for (int i = 0; i < this.getWheelsCount(); i++) {
+                this.updateTyre();
             }
-            car.checkEngine();
+            this.checkEngine();
         }
     }
 }

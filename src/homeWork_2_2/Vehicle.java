@@ -1,7 +1,6 @@
 package homeWork_2_2;
 
 public class Vehicle {
-
     private String modelName;
     private int wheelsCount;
 
